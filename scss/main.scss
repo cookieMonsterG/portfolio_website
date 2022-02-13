@@ -138,7 +138,7 @@ img {
     &-c {
         .process {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 1.5rem;
             text-align: center;
             &-step {
@@ -185,33 +185,26 @@ img {
 #about {
     &-a {
         .about-info {
-            display: grid;
-            grid-template-areas: 'bioimage bio bio' 'aw1 aw2 aw3';
-            grid-gap: 1.2rem;
+            display: flex;
+            justify-content: center;
+            //grid-gap: 1.2rem;
         }
         //Grid Area
         .bio-image {
-            grid-area: bioimage
+            //grid-area: bioimage
+            height: 300px;
+            object-fit: contain;
+            width: 20%;
+            //max-width: 100%;
         }
         .bio {
-            grid-area: bio;
             border-left: 3px solid $main-color;
             padding: 0.8rem;
-        }
-        .award-1 {
-            grid-area: aw1;
-        }
-        .award-2 {
-            grid-area: aw2;
-        }
-        .award-3 {
-            grid-area: aw3;
-        }
-        .award-1 .fas,
-        .award-2 .fas,
-        .award-3 .fas {
-            color: $main-color;
-            margin: 1rem;
+            p {
+                width: 50%;
+                margin: auto;
+                margin-top: 10%;
+            }
         }
     }
     //about-secion-b
@@ -228,6 +221,11 @@ img {
                 text-align: center;
                 background: $main-color;
             }
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
         }
     }
     // About C
@@ -271,6 +269,7 @@ img {
 //Contact page
 #contact {
     &-a {
+        height: 100vh;
         .text-fields {
             display: grid;
             grid-template-areas: 'name email' 'subject phone' 'message message';
